@@ -1,6 +1,6 @@
 #Needed imports: pandas and scipy.stats
 import pandas as pd
-import scipy
+from scipy.stats import mode
 import scipy.stats
 
 #Raw Data
@@ -24,4 +24,24 @@ column_names = data[0] #remove first  item, the header row, for column naming
 data_rows = data[1::] #the remaining data in the list  data
 df = pd.DataFrame(data_rows, columns=column_names) #push data into pandas, name columns
 
+#convert values in data frame to float for mathematical use
+df['Alcohol'] = df['Alcohol'].astype(float)
+df['Tobacco'] = df['Tobacco'].astype(float)
+
 #Answers
+
+print "The values for the Alcohol data set are as follows:"
+print "Mean: ", df['Alcohol'].mean()
+print "Median: ", df['Alcohol'].median()
+print "Mode: ", mode(df['Alcohol'])
+print "Range: ", max(df['Alcohol']) - min(df['Alcohol'])
+print "Variance: ", df['Alcohol'].var()
+print "Standard deviation: ", df['Alcohol'].std()
+print
+print "The values for the Tobacco data set are as follows:"
+print "Mean: ", df['Tobacco'].mean()
+print "Median: ", df['Tobacco'].median()
+print "Mode: ", mode(df['Tobacco'])
+print "Range: ", max(df['Tobacco']) - min(df['Tobacco'])
+print "Variance: ", df['Tobacco'].var()
+print "Standard deviation: ", df['Tobacco'].std()
