@@ -1,7 +1,6 @@
 #Needed imports: pandas and scipy.stats
 import pandas as pd
 from scipy.stats import mode
-import scipy.stats
 
 #Raw Data
 data = '''Region,Alcohol,Tobacco
