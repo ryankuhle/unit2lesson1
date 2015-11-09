@@ -28,11 +28,10 @@ df['Alcohol'] = df['Alcohol'].astype(float)
 df['Tobacco'] = df['Tobacco'].astype(float)
 
 #Answers
-
 print "The values for the Alcohol data set are as follows:"
 print "Mean: ", df['Alcohol'].mean()
 print "Median: ", df['Alcohol'].median()
-print "Mode: ", mode(df['Alcohol'])
+print "Mode: ", float(mode(df['Alcohol'])[0])
 print "Range: ", max(df['Alcohol']) - min(df['Alcohol'])
 print "Variance: ", df['Alcohol'].var()
 print "Standard deviation: ", df['Alcohol'].std()
@@ -40,7 +39,7 @@ print
 print "The values for the Tobacco data set are as follows:"
 print "Mean: ", df['Tobacco'].mean()
 print "Median: ", df['Tobacco'].median()
-print "Mode: ", mode(df['Tobacco'])
+print "Mode: ", float(mode(df['Tobacco'])[0])
 print "Range: ", max(df['Tobacco']) - min(df['Tobacco'])
 print "Variance: ", df['Tobacco'].var()
 print "Standard deviation: ", df['Tobacco'].std()
